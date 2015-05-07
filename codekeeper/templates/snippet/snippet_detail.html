@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+    <h2>{{ content.title }}</h2>
+
+        <p>Author is: <a href="{{ content.creator.url }}">{{ content.creator.full_name }}</a></p>
+        <p>Tags: {% for tag in content.tags %}
+            <a href="{{ tag.url }}">{{ tag.name }}</a>,
+            {% endfor %}</p>
+
+        <pre>{{ content.snippet }}</pre>
+
+{% endblock %}

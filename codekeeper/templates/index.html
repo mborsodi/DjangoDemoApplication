@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block body %}
+    <p>
+        <a href="search/">Search</a>
+    </p>
+
+    <ul>
+        <li><a href="{{ content.snippets }}">Snippets</a></li>
+        <li><a href="{{ content.tags }}">Tags</a></li>
+        <li><a href="{{ content.people }}">People</a></li>
+    </ul>
+
+
+{% endblock %}
